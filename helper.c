@@ -7,9 +7,13 @@ void variable_replacement(char **args, int *exe_ret);
 
 /**
  * free_args - Frees up memory taken by args.
+<<<<<<< HEAD
  *
  * @args: A null-terminated double pointer containing commands/arguments.
  *
+=======
+ * @args: A null-terminated double pointer containing commands/arguments.
+>>>>>>> d49879917bb2cdfbe578836d9a61060bcea540b7
  * @front: A double pointer to the beginning of args.
  */
 void free_args(char **args, char **front)
@@ -24,6 +28,7 @@ void free_args(char **args, char **front)
 
 /**
  * get_pid - Gets the current process ID.
+<<<<<<< HEAD
  *
  * Description: Opens the stat file, a space-delimited file containing
  *
@@ -31,6 +36,11 @@ void free_args(char **args, char **front)
  *
  *              first word in the file. The function reads the PID into
  *
+=======
+ * Description: Opens the stat file, a space-delimited file containing
+ *              information about the current process. The PID is the
+ *              first word in the file. The function reads the PID into
+>>>>>>> d49879917bb2cdfbe578836d9a61060bcea540b7
  *              a buffer and replace the space at the end with a \0 byte.
  *
  * Return: The current process ID or NULL on failure.
@@ -64,6 +74,7 @@ char *get_pid(void)
 
 /**
  * get_env_value - Gets the value corresponding to an environmental variable.
+<<<<<<< HEAD
  *
  * @beginning: The environmental variable to search for.
  *
@@ -71,6 +82,12 @@ char *get_pid(void)
  *
  * Return: If the variable is not found - an empty string.
  *
+=======
+ * @beginning: The environmental variable to search for.
+ * @len: The length of the environmental variable to search for.
+ *
+ * Return: If the variable is not found - an empty string.
+>>>>>>> d49879917bb2cdfbe578836d9a61060bcea540b7
  *         Otherwise - the value of the environmental variable.
  *
  * Description: Variables are stored in the format VARIABLE=VALUE.
@@ -104,9 +121,13 @@ char *get_env_value(char *beginning, int len)
 
 /**
  * variable_replacement - Handles variable replacement.
+<<<<<<< HEAD
  *
  * @line: A double pointer containing the command and arguments.
  *
+=======
+ * @line: A double pointer containing the command and arguments.
+>>>>>>> d49879917bb2cdfbe578836d9a61060bcea540b7
  * @exe_ret: A pointer to the return value of the last executed command.
  *
  * Description: Replaces $$ with the current PID, $? with the return value
@@ -145,7 +166,11 @@ void variable_replacement(char **line, int *exe_ret)
 				replacement = get_env_value(&old_line[j + 1], len);
 			}
 			new_line = malloc(j + _strlen(replacement)
+<<<<<<< HEAD
 					 + _strlen(&old_line[k]) + 1);
+=======
+					  + _strlen(&old_line[k]) + 1);
+>>>>>>> d49879917bb2cdfbe578836d9a61060bcea540b7
 			if (!line)
 				return;
 			new_line[0] = '\0';
