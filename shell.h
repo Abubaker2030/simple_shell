@@ -1,20 +1,15 @@
 #ifndef _SHELL_H_
 #define _SHELL_H_
 
-/*
- * File: shell.h
- * Auth: Abubker2030
- */
-
-#include <fcntl.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include <signal.h>
+#include <fcntl.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <sys/wait.h>
-#include <stdlib.h>
 #include <unistd.h>
 #include <errno.h>
-#include <stdio.h>
 
 #define END_OF_FILE -2
 #define EXIT -3
@@ -137,4 +132,4 @@ void help_unsetenv(void);
 void help_history(void);
 
 int proc_file_commands(char *file_path, int *exe_ret);
-#endif
+#endif /* _SHELL_H_ */
